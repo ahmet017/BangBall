@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235c0eb099ea6e42b5788be679eb56f, type: 3}
+  m_Name: Dat Boi T - Like A Dream ft. Fat Tony
+  m_EditorClassIdentifier: 
+  song: {fileID: 8300000, guid: 24e53a878ebd198498efcbf1a0b88ab6, type: 3}
+  BPM: 125
+  stars: 0
