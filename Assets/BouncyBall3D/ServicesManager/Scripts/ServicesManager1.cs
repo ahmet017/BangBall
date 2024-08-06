@@ -141,22 +141,7 @@ public class ServicesManager : MonoBehaviour {
 
                 rewardVideoAd = ad;
             });
-        rewardVideoAd.OnAdFullScreenContentClosed += () =>
-        {
-            Debug.Log("Rewarded Ad full screen content closed.");
-            GameManager.Instance.ReviveSucceed(true);
-            RequestRewardedVideoAdAdmob();
-
-        };
-
-        rewardVideoAd.OnAdFullScreenContentFailed += (AdError error) =>
-        {
-            Debug.LogError("Rewarded ad failed to open full screen content " +
-                           "with error : " + error);
-
-            // Reload the ad so that we can show another as soon as possible.
-            RequestRewardedVideoAdAdmob();
-        };
+        
 #endif
     }
 
@@ -234,6 +219,23 @@ public class ServicesManager : MonoBehaviour {
                 //Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
             });
         }
+
+        rewardVideoAd.OnAdFullScreenContentClosed += () =>
+        {
+            Debug.Log("Rewarded Ad full screen content closed.");
+            GameManager.Instance.ReviveSucceed(true);
+            RequestRewardedVideoAdAdmob();
+
+        };
+
+        rewardVideoAd.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Rewarded ad failed to open full screen content " +
+                           "with error : " + error);
+
+            // Reload the ad so that we can show another as soon as possible.
+            RequestRewardedVideoAdAdmob();
+        };
 #endif
     }
 #if ADS_ADMOB
