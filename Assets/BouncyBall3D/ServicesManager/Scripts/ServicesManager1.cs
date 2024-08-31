@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System;
 using Unity.VisualScripting;
-using Unity.VisualScripting;
 using UnityEngine.Purchasing;
 
 #if ADS_ADMOB
@@ -79,7 +78,7 @@ public class ServicesManager : MonoBehaviour {
 #if ADS_ADMOB
         bannerView = new BannerView(bannerID,AdSize.Banner,AdPosition.Bottom);
 
-        AdRequest request = new AdRequest.Builder().Build();
+        AdRequest request = new AdRequest();
 
         bannerView.LoadAd(request);
 #endif
